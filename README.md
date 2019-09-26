@@ -1,9 +1,10 @@
 #Shortcuts
 
-define: TERMMOD = C+Shift
-define: MODKEY = Alt
+define: M = Alt
 
-- Zoom In  = TERMMOD+plus
-- Zoom Out = TERMMOD+underscore
-- Copy     = Alt+w
-- Paste    = Ctrl+y
+- Zoom In  = C+Shift plus
+- Zoom Out = C+Shift underscore
+- Copy     = C+M w
+- Paste    = C+M y
+- Pageup   = C+M v
+- Pagedown = C+Shift v
