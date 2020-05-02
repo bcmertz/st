@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 
-static char *font = "mono:pixelsize=32:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=30:antialias=true:autohint=true";
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=20:antialias=true:autohint=true" };
 static int borderpx = 1;
 
@@ -184,6 +184,7 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ MODKEY,               XK_v,           kscrollup,      {.i = -1} },
 	{ TERMMOD,              XK_V,           kscrolldown,    {.i = -1} },
+        { MODKEY,               XK_l,           copyurl,        {.i =  0} },
 };
 
 /*
