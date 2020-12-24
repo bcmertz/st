@@ -202,7 +202,8 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY (ControlMask|Mod1Mask)
+#define MODKEY (ControlMask|Mod1Mask) /* C-Alt- */
+#define ALTKEY Mod1Mask /* Alt- */
 #define TERMMOD (ControlMask|ShiftMask)
 
 
@@ -225,9 +226,9 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_v,           kscrollup,      {.i = -1} },
 	{ TERMMOD,              XK_V,           kscrolldown,    {.i = -1} },
         { MODKEY,               XK_l,           copyurl,        {.i =  0} },
-        { MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-        { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+        { ALTKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
+        { MODKEY,               XK_l,           externalpipe,   {.v = copyurlcmd } },
+        { ALTKEY,               XK_y,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
