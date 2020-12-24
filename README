@@ -8,6 +8,9 @@ KeyBindings
 Copy URL: C-M-l
 Enlarge: C-Shift-+
 Shrink: C-Shift-_
+Copy Piped Output: M-y
+Open URL: M-l
+Copy URL: C-M-l
 
 Installation
 ------------
