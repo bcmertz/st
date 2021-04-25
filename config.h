@@ -7,7 +7,11 @@
  */
 
 static char *font = "mono:pixelsize=30:antialias=true:autohint=true";
-static char *font2[] = { "Inconsolata for Powerline:pixelsize=20:antialias=true:autohint=true" };
+static char *font2[] = {
+  "Vazir Code:size=16",
+  "Noto Color Emoji:size=14"
+};
+
 static int borderpx = 1;
 
 /*
