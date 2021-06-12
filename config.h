@@ -90,14 +90,14 @@ char *termname = "st-meta-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.65;
+float alpha = 0.85;
 
 /* Terminal colors (16 first used in escape sequence) */
 
 
 
 static const char *colorname[] = {
-  "#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
+  "#32302f", /* hard contrast: #1d2021 / soft contrast: #32302f */
   "#cc241d",
   "#98971a",
   "#d79921",
