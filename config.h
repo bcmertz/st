@@ -9,7 +9,8 @@
 static char *font = "mono:pixelsize=30:antialias=true:autohint=true";
 static char *font2[] = {
   "Vazir Code:size=16",
-  "Noto Color Emoji:size=14"
+  "Noto Color Emoji:size=14",
+  "UbuntuMonoNerdFont"
 };
 
 static int borderpx = 1;
