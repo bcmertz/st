@@ -1970,8 +1970,11 @@ usage(void)
 int
 main(int argc, char *argv[])
 {
-	xw.l = xw.t = 0;
-	xw.isfixed = False;
+        int i;
+        char *colval;
+        int load_resources = 1;
+        xw.l = xw.t = 0;
+        xw.isfixed = False;
 	win.cursor = cursorshape;
 
 	ARGBEGIN {
@@ -2017,6 +2020,12 @@ main(int argc, char *argv[])
 	case 'v':
 		die("%s " VERSION "\n", argv0);
 		break;
+        case 'C':
+                load_resources = 0;
+                colval = strtok(EARGF(usage()), "@");
+                i = atoi(strtok(NULL, "@"));
+		colorname[i] = colval;
+		break;
 	default:
 		usage();
 	} ARGEND;
@@ -2031,10 +2040,13 @@ run:
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");
 
-	if(!(xw.dpy = XOpenDisplay(NULL)))
-		die("Can't open display\n");
+        if(!(xw.dpy = XOpenDisplay(NULL)))
+            die("Can't open display\n");
 
-	config_init();
+        if (load_resources) {
+          config_init();
+        }
+
 	cols = MAX(cols, 1);
 	rows = MAX(rows, 1);
 	tnew(cols, rows);
